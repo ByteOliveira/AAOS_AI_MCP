@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Default string resources for the AI MCP host app.  Keeping at
+        least one string resource allows the app to build even if no
+        layout or drawable resources are present.
+    -->
+    <string name="app_name">AiMcpHost</string>
+</resources>
