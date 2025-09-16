@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ai.mcp">
+
+    <!--
+        This manifest declares a minimal privileged application that
+        implements a foreground service (`McpHostService`).  The service
+        doesn't expose any functionality yet; instead it serves as a
+        placeholder where you can register MCP tools and integrate your
+        on‑device language model.  Because the app is privileged and
+        signed with the platform certificate, it can access
+        Automotive‑specific APIs once appropriate permissions are added.
+    -->
+
+    <application
+        android:label="AI MCP Host"
+        android:allowBackup="false">
+
+        <service
+            android:name=".McpHostService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+    </application>
+
+</manifest>
