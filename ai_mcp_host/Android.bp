@@ -1,0 +1,18 @@
+// Build script for the AI MCP host app.  This Soong module declares an
+// android_app that will be built as part of the system image.  It is
+// privileged and uses platform APIs so it can access restricted
+// Automotive services.  If you distribute a prebuilt APK instead,
+// consider using android_app_import as described in the AAOS
+// documentation【769513936751118†L566-L579】.
+
+android_app {
+    name: "AiMcpHost",
+    srcs: [
+        "src/**/*.java",
+    ],
+    resource_dirs: ["res"],
+    sdk_version: "system_current",
+    privileged: true,
+    platform_apis: true,
+    certificate: "platform",
+}
